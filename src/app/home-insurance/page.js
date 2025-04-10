@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import HomeIcon from '../assets/HomeIns.png';
 import { Home, Shield, Umbrella, Wrench, Bell, CreditCard } from 'lucide-react';
 
-export default function HomeInsurancePage() {
+const HomeInsurance = () => {
   const features = [
     {
       icon: <Home className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function HomeInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Home Insurance Solutions"
       description="Protect your home with confidence through Ameni’s digital-first insurance experience. Whether you own or rent, our platform connects you to reliable home coverage options that safeguard your property, belongings, and liabilities — all accessible online in minutes. From fire and flood protection to theft and temporary housing coverage, our technology simplifies the way you secure what matters most. Enjoy flexibility, transparency, and full control over your insurance journey."
-      icon="/HomeIns.png"
+      icon={HomeIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default HomeInsurance;

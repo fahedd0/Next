@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import DogIcon from '../assets/PetIns.png';
 import { Heart, Stethoscope, Dog, Pill, Activity, Smile } from 'lucide-react';
 
-export default function PetInsurancePage() {
+const PetInsurance = () => {
   const features = [
     {
       icon: <Stethoscope className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function PetInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Pet Insurance Solutions"
       description="Give your pets the care they deserve with Ameni’s seamless digital pet insurance experience. From routine checkups to emergency treatments, our platform offers a range of customizable plans to support your pet’s health at every stage. Easily access coverage for illnesses, accidents, medications, and even alternative therapies — all managed online in just a few clicks. Whether you’re a first-time pet parent or managing multiple pets, we make insurance simple, affordable, and tailored for peace of mind."
-      icon="/PetIns.png"
+      icon={DogIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default PetInsurance;

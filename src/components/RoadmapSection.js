@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-'use client';
+import React from 'react';
+import roadmapImage from '../assets/path.png';
 
-export default function RoadmapSection() {
+const RoadmapSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -27,9 +27,12 @@ export default function RoadmapSection() {
         </div>
 
         <div className="max-w-5xl mx-auto reveal">
-          <img src="/path.png" alt="Click2Secure Roadmap" className="w-full" />
+          
+          {<img src={roadmapImage} alt="Click2Secure Roadmap" className="w-full" /> }
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default RoadmapSection;

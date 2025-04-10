@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Fix for image optimization
+  // Proper image optimization configuration
   images: {
     domains: [],
-    unoptimized: process.env.NODE_ENV !== 'production',
+    // No need to disable optimization in development
+    // This ensures consistent behavior between environments
   },
-  // Enable experimental features if needed
+  // Enable necessary experimental features
   experimental: {
-    // Enable if needed for App Router
+    // Empty for now - add specific features if needed
   },
 };
 

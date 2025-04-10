@@ -9,6 +9,7 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
+// Use eslint-config-next to match with Next.js version 14
 const eslintConfig = [...compat.extends("next/core-web-vitals")];
 
 export default eslintConfig;

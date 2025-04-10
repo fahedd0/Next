@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import CogIcon from '../assets/EngIns.png';
 import { HardHat, Building, Wrench, Clock, Shield, Construction } from 'lucide-react';
 
-export default function EngineeringInsurancePage() {
+const EngineeringInsurance = () => {
   const features = [
     {
       icon: <Construction className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function EngineeringInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Engineering Insurance Solutions"
       description="Ameni supports engineering firms, developers, and contractors with specialized digital insurance solutions designed for high-risk, high-value projects. Whether it’s civil, mechanical, or electrical works, our platform helps you safeguard your equipment, materials, and workforce from unexpected disruptions. With fast access to expert-backed policies, Ameni ensures smoother operations, minimized downtime, and enhanced risk control — all through a modern, streamlined experience."
-      icon="/EngIns.png"
+      icon={CogIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default EngineeringInsurance;

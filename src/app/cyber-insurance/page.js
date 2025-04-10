@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import ShieldIcon from '../assets/CyberIns.png';
 import { ShieldAlert, Lock, Server, GanttChart, Scale, LifeBuoy } from 'lucide-react';
 
-export default function CyberInsurancePage() {
+const CyberInsurance = () => {
   const features = [
     {
       icon: <ShieldAlert className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function CyberInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Cyber Insurance Solutions"
       description="In today’s connected world, cyber threats are constant — and costly. Ameni’s Cyber Insurance Solutions offer digital-first protection designed for businesses of all sizes, helping you stay secure, resilient, and compliant. From ransomware attacks to data breaches, our platform connects you with specialized coverage that minimizes downtime, safeguards your reputation, and provides expert support when it matters most. Secure your digital environment with fast, flexible insurance built for the modern threat landscape."
-      icon="/CyberIns.png"
+      icon={ShieldIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default CyberInsurance;

@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import CarIcon from '../assets/CarIns.png';
 import { Shield, Car, CreditCard, Clock, CheckSquare, Wrench } from 'lucide-react';
 
-export default function MotorInsurancePage() {
+const MotorInsurance = () => {
   const features = [
     {
       icon: <Car className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function MotorInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Motor Insurance Solutions"
       description="Experience fast, reliable motor insurance designed for the digital age. Ameni simplifies the way individuals and businesses access vehicle coverage, offering flexible options that suit every driver. Whether you need basic protection or full-risk coverage, our platform ensures instant access to trusted insurance providers, competitive premiums, and real-time support. Enjoy seamless policy issuance, flexible repair options, and enhanced roadside assistance — all in one place."
-      icon="/CarIns.png"
+      icon={CarIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default MotorInsurance;

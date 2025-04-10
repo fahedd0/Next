@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import PlaneIcon from '../assets/TravelIns.png';
 import { Plane, ShieldCheck, Stethoscope, Clock, Briefcase, Globe } from 'lucide-react';
 
-export default function TravelInsurancePage() {
+const TravelInsurance = () => {
   const features = [
     {
       icon: <Stethoscope className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function TravelInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Travel Insurance Solutions"
       description="Travel with confidence using Ameni’s smart, digital-first travel insurance options. Whether it’s a short getaway or a global adventure, our platform helps you find protection for unexpected events — from medical emergencies and flight delays to lost baggage and trip cancellations. With user-friendly access, tailored coverage, and 24/7 support, you can enjoy your journey while we take care of the “what-ifs.” Stay protected, stay worry-free, wherever you go."
-      icon="/TravelIns.png"
+      icon={PlaneIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default TravelInsurance;

@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import BriefcaseIcon from '../assets/BusinessIns.png';
 import { Building, ShieldCheck, Users, Truck, FileText, Clock } from 'lucide-react';
 
-export default function BusinessInsurancePage() {
+const BusinessInsurance = () => {
   const features = [
     {
       icon: <Building className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function BusinessInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Business Insurance Solutions"
       description="Ameni helps modern businesses stay resilient with customizable insurance solutions designed to protect people, property, and operations. From small startups to large enterprises, our platform offers flexible policies covering everything from liability to employee protection. Get insured against unforeseen disruptions, legal claims, or asset loss all through a secure and intuitive digital experience. Simplify your risk management while staying compliant and confident, every step of the way."
-      icon="/BusinessIns.png"
+      icon={BriefcaseIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default BusinessInsurance;

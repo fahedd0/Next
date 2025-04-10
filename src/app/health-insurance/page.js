@@ -1,9 +1,9 @@
-'use client';
-
-import InsuranceSolutionTemplate from '@/components/InsuranceSolutionTemplate';
+import React from 'react';
+import InsuranceSolutionTemplate from '../components/InsuranceSolutionTemplate';
+import HealthIcon from '../assets/HealthIns.png';
 import { Heart, Activity, Clock, Shield, Users, Award } from 'lucide-react';
 
-export default function HealthInsurancePage() {
+const HealthInsurance = () => {
   const features = [
     {
       icon: <Heart className="h-6 w-6 text-blue-500" />,
@@ -79,10 +79,12 @@ export default function HealthInsurancePage() {
     <InsuranceSolutionTemplate 
       title="Health Insurance Solutions"
       description="Empower your health journey with digital-first insurance options designed for individuals, families, and professionals. Ameni simplifies how you access quality healthcare protection, connecting you to customizable plans that cover everything from emergencies to preventive care. With instant policy access, 24/7 digital support, and trusted providers, we make it easier than ever to secure the coverage you need — wherever life takes you."
-      icon="/HealthIns.png"
+      icon={HealthIcon}
       features={features}
       benefits={benefits}
       faqs={faqs}
     />
   );
-}
+};
+
+export default HealthInsurance;

@@ -1,7 +1,5 @@
-'use client';
-
 import React, { useState } from 'react';
-import Image from 'next/image';
+import meLogo from '../assets/squares.png';
 import { FileText, ShieldCheck, SlidersHorizontal, Network } from 'lucide-react';
 
 const HeroSection = () => {
@@ -101,14 +99,7 @@ const HeroSection = () => {
               <div className="bg-white bg-opacity-10 p-8 backdrop-blur-xl border border-white border-opacity-20 rounded-xl shadow-2xl relative z-10">
                 <div className="flex items-center mb-8">
                   <div className="bg-white rounded-xl p-2 mr-4 shadow-sm">
-                  <div className="relative w-10 h-10">
-                    <Image
-                      src="/squares.png"
-                      alt="Squares Logo"
-                      fill
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
+                    <img src={meLogo} alt="Squares Logo" className="w-10 h-10 object-contain" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-inter">Trusted by Industry Leaders</h3>

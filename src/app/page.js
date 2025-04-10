@@ -1,14 +1,14 @@
-'use client';
+import React from 'react';
+import HeroSection from '../components/HeroSection';
+import HowItWorksSection from '../components/HowItWorksSection';
+import FeaturesSection from '../components/FeaturesSection';
+import RoadmapSection from '../components/RoadmapSection';
+import TrustedClientsSection from '../components/TrustedClientsSection';
+import GlobalPresenceSection from '../components/GlobalPresenceSection';
+import CTASection from '../components/CTASection';
 
-import HeroSection from '@/components/HeroSection';
-import HowItWorksSection from '@/components/HowItWorksSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import RoadmapSection from '@/components/RoadmapSection';
-import TrustedClientsSection from '@/components/TrustedClientsSection';
-import GlobalPresenceSection from '@/components/GlobalPresenceSection';
-import CTASection from '@/components/CTASection';
 
-export default function HomePage() {
+const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
@@ -22,4 +22,7 @@ export default function HomePage() {
       </main>
     </div>
   );
-}
+};
+
+
+export default Home;

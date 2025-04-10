@@ -1,17 +1,53 @@
-/* eslint-disable @next/next/no-img-element */
-'use client';
+import React from 'react';
+import ABNIC from '../assets/ABNIC.png';
+import ALLIANZ from '../assets/ALLIANZ.png';
+import FIDELITY from '../assets/FIDELITY.png';
+import GOVUAQ from '../assets/GOVUAQ.png';
+import NEXTCARE from '../assets/NEXTCARE.png';
+import RAKBANK from '../assets/RAKBANK.png';
+import RAKIns from '../assets/RAKIns.png';
+import UAQFTZ from '../assets/UAQFTZ.png';
+import UAQU from '../assets/UAQU.png';
 
-export default function TrustedClientsSection() {
+
+const TrustedClientsSection = () => {
   const clients = [
-    { name: "Al Buhaira National Insurance Co.", logo: "/ABNIC.png" },
-    { name: "Allianz", logo: "/ALLIANZ.png" },
-    { name: "Fidelity United", logo: "/FIDELITY.png" },
-    { name: "Government of Umm Al Quwain", logo: "/GOVUAQ.png" },
-    { name: "NEXTCARE", logo: "/NEXTCARE.png" },
-    { name: "RAKBANK", logo: "/RAKBANK.png" },
-    { name: "RAK Insurance", logo: "/RAKIns.png" },
-    { name: "UAQ Free Zone", logo: "/UAQFTZ.png" },
-    { name: "Umm Al Quwain University", logo: "/UAQU.png" },
+    {
+      name: "Al Buhaira National Insurance Co.",
+      logo: ABNIC
+    },
+    {
+      name: "Allianz",
+      logo: ALLIANZ
+    },
+    {
+      name: "Fidelity United",
+      logo: FIDELITY
+    },
+    {
+      name: "Government of Umm Al Quwain",
+      logo: GOVUAQ
+    },
+    {
+      name: "NEXTCARE",
+      logo: NEXTCARE
+    },
+    {
+      name: "RAKBANK",
+      logo: RAKBANK
+    },
+    {
+      name: "RAK Insurance",
+      logo: RAKIns
+    },
+    {
+      name: "UAQ Free Zone",
+      logo: UAQFTZ
+    },
+    {
+      name: "Umm Al Quwain University",
+      logo: UAQU
+    },
   ];
 
   return (
@@ -38,11 +74,12 @@ export default function TrustedClientsSection() {
 
         <div className="flex flex-wrap justify-center items-center gap-12 mb-16 reveal">
           {clients.map((client, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+            <div 
+              key={index} 
+              className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" 
               style={{ transitionDelay: `${index * 100}ms` }}
             >
+              {/* logos */}
               <img
                 src={client.logo}
                 alt={client.name}
@@ -61,4 +98,6 @@ export default function TrustedClientsSection() {
       </div>
     </section>
   );
-}
+};
+
+export default TrustedClientsSection;
