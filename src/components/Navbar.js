@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,11 +37,21 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center transition-transform duration-300 hover:scale-105">
           <div className="bg-white px-3 py-2 rounded-lg shadow-md">
-            <img src="/logo.png" alt="Click2Secure Logo" className="h-10" />
+            {/* Use Next.js Image component with proper sizes */}
+            <div className="relative h-10 w-32">
+              <Image 
+                src="/logo.png" 
+                alt="Click2Secure Logo" 
+                fill
+                style={{ objectFit: 'contain' }}
+                sizes="(max-width: 640px) 100vw, 128px"
+                priority
+              />
+            </div>
           </div>
         </Link>
 
-        <div className="hidden md:flex items-center space-x-1">
+        <div className="flex items-center space-x-1">
           <NavLink href="/" currentPath={pathname} isHome={isHome}>Home</NavLink>
           <NavLink href="/services" currentPath={pathname} isHome={isHome}>Services</NavLink>
           <NavLink href="/about" currentPath={pathname} isHome={isHome}>About</NavLink>
@@ -60,6 +69,7 @@ export default function Navbar() {
                 ? 'bg-white bg-opacity-90 text-blue-800 hover:bg-opacity-100' 
                 : 'bg-blue-50 text-blue-800 hover:bg-blue-100'
             }`}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
